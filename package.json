@@ -1,0 +1,54 @@
+{
+  "name": "@theprelude/sdk",
+  "version": "1.5.7",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sdk.umd.cjs",
+  "module": "./dist/sdk.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/sdk.js",
+      "require": "./dist/sdk.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "yarn build",
+    "test": "vitest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.30.0",
+    "date-fns": "^2.30.0"
+  },
+  "description": "Use this utility if you want direct access to the Prelude API.",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preludeorg/js-sdk.git"
+  },
+  "keywords": [
+    "prelude",
+    "theprelude",
+    "security"
+  ],
+  "author": "support@preludesecurity.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preludeorg/js-sdk/issues"
+  },
+  "homepage": "https://github.com/preludeorg/js-sdk#readme"
+}
